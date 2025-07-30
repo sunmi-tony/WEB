@@ -17,9 +17,9 @@
     }
 
     header {
-      background-color: #4682b4;
+      background-color: #b4467d;
       color: white;
-      padding: 30px 80px;
+      padding: 15px 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -124,6 +124,21 @@
       margin: 20px;
     }
 
+   button {
+      font-size: 20px;
+      background-color: #f8bed9;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #f8bed9;
+    }
+
     footer {
      text-align: center;
       margin: 10px 0 10px;
@@ -198,59 +213,84 @@
 
   <header>
     <div>
-      <a href="index.html"><h2>행복이 가득한 정원</h2></a>
+      <a href="index.html"><h2>처음으로</h2></a>
     </div>
     <nav>
       <a href="1.html">시작의 그날</a>
-      <a href="2.html">잊지 못할 추억</a>
+      <a href="2.html">잊지 못할 날들</a>
       <a href="3.html">지금 이순간</a>
       <a href="4.html"> 그리고 </a>
     </nav>
   </header>
 
   <h1>🌹내 마음에 피어난 당신이라는 꽃 🌹</h1>
+
+<div class="button-container">
+    <button id="toggleBtn" onclick="toggleAudio()">"꽃"</button>
+  </div>
+
+
   <p>
     향기 가득 머금고 피어나는 꽃처럼<br>
     당신은 조용히 내 마음에 스며들었습니다.<br><br>
-    바람이 머물다 가는 오후에도,<br>
-    햇살이 포근히 내려앉는 아침에도,<br>
+
+    햇살이 포근히 내려앉는 아침에도<br>
+    바람이 머물다 가는 오후에도<br><br>
+    
     내 마음 가장 깊은 곳엔<br>
     언제나 당신이 은은하게 피어 있습니다.<br><br>
-    시간이 흘러도 시들지 않는 마음,<br>
-    계절이 바뀌어도 변치 않는 따스함,<br><br>
+
+    시간이 흘러도 시들지 않는 마음<br>
+    계절이 바뀌어도 변치 않는 따스함<br><br>
+
     당신이라는 꽃은<br>
     내 삶에 피어난 가장 고운 기적이자,<br>
-    가장 오래도록 지켜주고 싶은 하나뿐인 꽃입니다.<br>
+    가장 오래도록 지켜주고 싶은, <br>
+    하나뿐인 꽃입니다.<br>
   </p>
 
-  <div class="button-container">
-    <button onclick="document.getElementById('bgm').play()">"너를 두고" push</button>
-  </div>
-
+  
   <audio id="bgm" loop>
-    <source src="music2.m4a" type="audio/mpeg">
+    <source src="꽃.m4a" type="audio/mpeg">
   </audio>
+
+<script>
+    const bgm = document.getElementById("bgm");
+    const toggleBtn = document.getElementById("toggleBtn");
+
+    function toggleAudio() {
+      if (bgm.paused) {
+        bgm.play();
+        toggleBtn.textContent = "멈추기";
+      } else {
+        bgm.pause();
+        toggleBtn.textContent = '"꽃" push';
+      }
+    }
+  </script>
 
   
 
   <!-- ✅ 선물상자와 글자 함께 있는 중앙 정렬 박스 -->
   <div class="gift-wrapper">
     <div class="gift-container">
-      <img id="giftBox" class="gift-box" src="선물상자(파).png" alt="선물 상자">
+      <img id="giftBox" class="gift-box" src="선물상자(빨).jpeg" alt="선물 상자">
       <img id="heart" class="heart" src="휴대폰.jpg" alt="하트">
     </div>
     <div class="text-box">
-      <p>
-        이 🎁 안에는<br>
-        <strong>당신을 위한 작은 기쁨</strong>이 담겨 있어요!<br>
-        클릭해보세요 💝
-      </p>
-
-       <p><h5>-이곳은 당신 그리고 K4를 위한 공간-</h5></p>
-
+         
     </div>
   </div>
 
+<style>
+  .center-text {
+    text-align: center;
+  }
+</style>
+
+<div class="center-text">
+  <h5>-이곳은 당신 그리고 K4를 위한 공간-</h5>
+</div>
 
 
   <footer>
@@ -263,7 +303,7 @@
 
     box.addEventListener("click", () => {
       box.classList.add("animate");
-      heart.style.animation = "popHeart 1s ease forwards";
+      heart.style.animation = "popHeart 2s ease forwards";
       setTimeout(() => {
         box.classList.remove("animate");
         heart.style.animation = "";
