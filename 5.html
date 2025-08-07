@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
+<meta charset="utf-8">
   <title>행복한 시간을 보내며</title>
   <style>
     body {
@@ -69,18 +70,10 @@ h2 {
       line-height: 1.6;
     }
 
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 30px;
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    }
-
+    /* 슬라이드 스타일 */
     .slideshow-container {
       position: relative;
-      max-width: 60%;
+      max-width: 100%;
       margin: 30px auto;
     }
 
@@ -91,11 +84,12 @@ h2 {
 
     .mySlides img {
       width: 60%;
-      max-height: 500px;
+      max-height: 400px;
       border-radius: 10px;
       object-fit: cover;
     }
 
+    /* 점 스타일 */
     .dot-container {
       text-align: center;
       margin-top: 15px;
@@ -109,8 +103,8 @@ h2 {
       border-radius: 50%;
       display: inline-block;
       transition: background-color 0.3s;
-    }
-
+    }    
+    
     .active {
       background-color: #4CAF50;
     }
@@ -128,7 +122,7 @@ h2 {
       header {
         flex-direction: column;
         align-items: flex-start;
-        padding: 20px 40px;
+        padding: 10px 20px;
       }
 
       nav {
@@ -182,110 +176,145 @@ h2 {
       }
     }
 
+
+
   </style>
 </head>
 
-<body>
 
-  <!-- 🔊 배경음악 자동 재생 -->
-  <audio id="bgm" autoplay muted loop>
-    <source src="music1.mp3" type="audio/mpeg">
-   
-  </audio>
+<style>
+    .button-container {
+      text-align: center; /* 중앙 정렬 */
+      margin: 20px;
+    }
+  </style>
 
-  <script>
-    window.addEventListener('click', () => {
-      const bgm = document.getElementById("bgm");
-      if (bgm.muted) {
-        bgm.muted = false;
-        bgm.play();
-      }
-    }, { once: true });
-  </script>
 
   <!-- 🟦 상단 영역 -->
   <header>
     <div>
-      <a href="index.html"><h2>처음으로</h2></a>
-    </div>
+      <a href="index.html"> <h2>처음으로</h2></a>
+    </div>  
+
     <nav>
-      <a href="1.html">시작의 그날</a>
-      <a href="2.html">잊지 못할 날들</a>
-      <a href="3.html">지금 이순간</a>
-      <a href="4.html">그리고</a>
-      <a href="5.html">선미생일</a>
+     <a href="1.html">시작의 그날</a>
+     <a href="2.html">잊지 못할 날들</a>
+     <a href="3.html">지금 이순간</a>
+     <a href="4.html">그리고 </a>
+     <a href="5.html">선미생일</a>
     </nav>
   </header>
 
-  <h1>시작의 그날</h1>
+<h1>🎉 생일 축하해🎉 </h1>
+<p>내사랑 , 생일 진심으로 축하해요.<br><br>
 
-  <div class="container">
-    <p>
-      2000년 12월 13일, 당신을 처음 만난 그날.<br>
-      회사 선배의 결혼식에 참석한 후,<br>
-      아직 낯설지만 어쩐지 특별한 예감이 스치는 마음으로 약속 장소로 향했습니다.<br>
-      가슴은 콩닥콩닥, 설렘과 긴장이 뒤섞인 발걸음이었습니다.<br><br>
+   오늘은 세상에서 가장 소중한 사람이 태어난 날!<br><br>
+  
+   오늘은 당신의 날이에요.<br>
+   세상에서 제일 예쁘고, 제일 따뜻한 당신이<br>
+   행복으로 가득한 하루를 보내길 바래요.<br><br>
 
-      결혼식에 맞춰 정갈하게 차려입은 양복,<br>
-      그 모습이 당신 눈에 어떻게 비칠까…<br>
-      걱정 반, 기대 반의 감정 속에서 조심스레 당신과 마주친 그 순간<br><br>
+   당신이 웃는 모습이<br>
+   내겐 세상에서 제일 아름다워요.<br>
+   
+   늘 사랑하고, 늘 고마워요.<br>
+   앞으로도 우리 함께, 행복하고 아름다운 날들을 만들어 가요.<br><br>
 
-      당신의 해맑은 웃음이 내 눈을 사로잡았고,<br>
-      그 찰나에 내 마음도, 온몸의 세포도<br>
-      소리 없이, 그러나 확실하게 당신을 향해 움직이기 시작했습니다.<br><br>
+   특별한 생일날 함께 하지 못해 너무 미안해요. <br>
+   
+</p>
 
-      당신의 환한 미소는 아직도 내 기억 속에 반짝이고 있습니다.<br>
-      그 순간은 단순한 첫 만남이 아니라<br>
-      내 인생의 방향이 달라진 가장 특별한 시작이었음을,<br>
-      지금도, 그리고 앞으로도 잊지 못할 것 같습니다.
-    </p>
-  </div>
+<p>
 
-  <!-- 📸 사진 슬라이드 -->
+ <div style="text-align: center; margin-top: 30px;">
+  <video width="700" height="480" controls>
+    <source src="생축동1.mp4" type="video/mp4">
+    
+  </video>
+</div>
+
+</P>
+
+<section class="container">
+  <p>
+    당신의 생일을 함께 축하 한지도 어느덧 25번째가 되었네요<br>
+    이 소중한 순간들의 사진이 별로 없어서, 너무 아쉽네요.<br><br>
+
+    <a href="https://m.sports.naver.com/general/article/079/0004025177" target="_blank" title="네이버뉴스"><strong>당신</strong></a> 과 
+    <a href="https://www.hksooyo.com/bbs/board.php?bo_table=news&wr_id=36620" target="_blank" title="홍콩 뉴스"><strong>나</strong></a>
+      우리가 함께 행복을 만들어 갑니다.<br>
+  </p>
+
   <div class="slideshow-container">
     <div class="mySlides">
-      <img src="soungmi1.jpg" alt="시작의 그날 1">
-    </div>
+      <img src="2014.jpg" alt="선미1"></div>
     <div class="mySlides">
-      <img src="soungmi2.jpg" alt="시작의 그날 2">
-    </div>
+      <img src="2015.jpg" alt="선미2"></div>
     <div class="mySlides">
-      <img src="sunmi2.JPG" alt="시작의 그날 3">
-    </div>
-
-
+      <img src="2016.jpg" alt="선미3"></div>
+     <div class="mySlides">
+      <img src="2017.jpg" alt="선미4"></div>
+     <div class="mySlides">
+      <img src="2018.jpg" alt="선미5"></div>
+    <div class="mySlides">
+      <img src="2019.jpg" alt="선미6"></div>
+    <div class="mySlides">
+      <img src="2020.jpg" alt="선미7"></div>
+    <div class="mySlides">
+      <img src="2021.jpg" alt="선미8"></div>
+     <div class="mySlides">
+      <img src="2022.jpg" alt="선미9"></div>
+     <div class="mySlides">
+      <img src="2023.jpg" alt="선미10"></div>
+     <div class="mySlides">
+      <img src="2024.jpg" alt="선미11"> </div>
+     <div class="mySlides">
+      <img src="2025.jpg" alt="선미12"> </div>
   </div>
 
   <div class="dot-container">
     <span class="dot"></span> 
     <span class="dot"></span> 
     <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span>
+  </div>
+</section>
 
+      <footer>
+      ⓒ 2025 8 8 생일 축하해 
+    </footer>
   </div>
 
-  <footer>
-    ⓒ 2025 7 31 행복한 시간을 보내며
-  </footer>
-
-  <script>
+<script>
     let slideIndex = 0;
     showSlides();
 
     function showSlides() {
-      const slides = document.getElementsByClassName("mySlides");
-      const dots = document.getElementsByClassName("dot");
-      for (let i = 0; i < slides.length; i++) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";  
       }
       slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1 }    
-      for (let i = 0; i < dots.length; i++) {
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
       }
       slides[slideIndex-1].style.display = "block";  
       dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 3000); // 3초마다 이미지 변경
+      setTimeout(showSlides, 4000); // 4초마다 이미지 변경
     }
   </script>
+
+
 </body>
 </html>
